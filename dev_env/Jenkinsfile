@@ -19,8 +19,8 @@ pipeline {
                 echo "Deploying DEV environment..."
 
                 dir("${DOCKER_COMPOSE_DIR}") {
-                    sh "sudo docker compose build"
-                    sh "sudo docker compose up -d"
+                    sh "sudo docker-compose build"
+                    sh "sudo docker-compose up -d"
                 }
             }
         }
@@ -32,7 +32,7 @@ pipeline {
                 echo "Removing DEV environment..."
 
                 dir("${DOCKER_COMPOSE_DIR}") {
-                    sh "sudo docker compose down --remove-orphans"
+                    sh "sudo docker-compose down --remove-orphans"
                     sh "sudo docker system prune -af"
                 }
             }
