@@ -1,40 +1,15 @@
-# Maven build output
+i# Maven build output
 target/
 build/
 
 # Maven Wrapper Jar file (should NOT be ignored)
-!.mvn/wrapper/maven-wrapper.jar
+# Ignore everything
+/*
 
-# Ignore target folders inside source directories
-!**/src/main/**/target/
-!**/src/test/**/target/
-
-# STS (Spring Tool Suite) files
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-# IntelliJ IDEA files
-.idea/
-*.iws
-*.iml
-*.ipr
-
-# NetBeans files
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-
-# VS Code settings folder
-.vscode/
-
-# Logs and temp files
-*.log
-*.tmp
+# But do NOT ignore these files/folders:
+!src/
+!pom.xml
+!.gitignore
+!Dockerfile
+!README.md
 
